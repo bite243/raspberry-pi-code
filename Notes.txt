@@ -1,0 +1,10 @@
+#If press 'Ctrl Z' while a process is occuring
+
+pi@raspberrypi ~/Bryce $ ps aux | grep python 
+pi        1502  0.1  0.5   9088  5236 pts/0    T    10:05   0:00 python led_blink_loops2.py
+pi        1508  0.0  0.1   4260  1848 pts/0    S+   10:06   0:00 grep --color=auto python
+pi@raspberrypi ~/Bryce $ sudo kill -9 1502
+[1]+  Killed                  python led_blink_loops2.py
+pi@raspberrypi ~/Bryce $ ps aux | grep python 
+pi        1527  0.0  0.1   4260  1848 pts/0    S+   10:06   0:00 grep --color=auto python
+pi@raspberrypi ~/Bryce $ ps aux | grep python 
